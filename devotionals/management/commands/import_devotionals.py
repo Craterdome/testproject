@@ -11,8 +11,6 @@ class Command(BaseCommand):
     help = 'Imports devotionals from file path'
 
     def handle(self, *args, **options):
-        for d in Devotional.objects.all():
-            d.delete()
         for file_path in args:
             now = datetime.datetime.now()
             reader = csv.reader(open(file_path, 'rb'), delimiter=',', quotechar='"')
