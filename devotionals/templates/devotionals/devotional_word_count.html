@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Totals words: {{ count }}{% endblock title %}
+
+{% block content %}
+    Total words: {{ count }}
+    <p>
+        <a href="{% url devotional_all %}">Back to home</a>
+    </p>
+{% endblock content %}

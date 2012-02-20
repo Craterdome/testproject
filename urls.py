@@ -9,7 +9,8 @@ urlpatterns = patterns('',
     # url(r'^$', 'sample.views.home', name='home'),
     (r'^', include(patterns('devotionals.views',
         url(r'^$', 'devotional_all', name='devotional_all'),
-        url(r'^(?P<year>[0-9]+)/(?P<month>[0-9]+)/(?P<day>[0-9]+)/$', 'devotional_date', name='devotional_date')
+        url(r'^(?P<year>[0-9]+)/(?P<month>[0-9]+)/(?P<day>[0-9]+)/$', 'devotional_date', name='devotional_date'),
+        url(r'^wordcount', 'devotional_word_count', name='devotional_word_count')
     ))),
 
     # Uncomment the admin/doc line below to enable admin documentation:

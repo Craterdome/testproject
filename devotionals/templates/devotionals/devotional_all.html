@@ -3,9 +3,13 @@
 {% block title %}All Devotionals{% endblock title %}
 
 {% block content %}
-    {% for d in devotionals %}
-        <p>
-            <a href="{% url devotional_date d.created_date.year d.created_date.month d.created_date.day %}">{{ d }}</a>
-        </p>
-    {% endfor %}
+    <a href="{% url devotional_word_count %}">Word Count</a>
+    {% if devotionals %}
+        <h2>Devotionals</h2>
+        {% for d in devotionals %}
+            <p>
+                <a href="{% url devotional_date d.created_date.year d.created_date.month d.created_date.day %}">{{ d }}</a>
+            </p>
+        {% endfor %}
+    {% endif %}
 {% endblock content %}

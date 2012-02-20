@@ -8,4 +8,7 @@
         <h3>{{ devotional.created_date }}</h3>
         <p>{{ devotional.body|safe }}</p>
     {% endfor %}
+    <p>
+        <a href="{% url devotional_all %}">Back to home</a>
+    </p>
 {% endblock content %}
